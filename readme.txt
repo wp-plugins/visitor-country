@@ -3,7 +3,7 @@ Contributors: Izhaki
 Tags: geo, location, visitor, country, analysis
 Requires at least: 3.2
 Tested up to: 3.4.2
-Stable tag: 1.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,7 +78,6 @@ Not at the moment, but this will be implemented shall there be a demand.
 The plugin will go up in version periodically to reflect MaxMind's new database. You can always update it manually by [downloading it from here](http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz), uncompress, and upload to the plugin directory.
 
 == Changelog ==
-
 
 = 1.0 =
 * MaxMind database update
