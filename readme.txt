@@ -11,9 +11,9 @@ A plugin that retrieves the visitor's country information (using MaxMind's GeoIP
 
 == Description ==
 
-This plugin adds support for displaying (using shortcodes) or enquiring (using PHP or JS) the visitor's country.
+This plugin adds support for displaying (using shortcodes) or enquiring (using PHP or JS) the visitor's country. See it working [here](http://gefri.org/misc/wordpress/visitor-country).
 
-It uses [MaxMind's GeoIP data file](http://www.maxmind.com/app/geolitecountry), which is around 1 MB in size and is included with the plugin. The file is free, updated every month, and has the claimed accuracy of 99.5%;
+It uses [MaxMind's GeoIP data file](http://www.maxmind.com/app/geolitecountry), which is around 1.4 MB in size and is included with the plugin. The file is free, updated every month, and has the claimed accuracy of 99.5%;
 
 The plugin retrieves:
 
@@ -47,6 +47,9 @@ Please leave suggestions, comments and bug report at [the plugin's website](http
 
 Also, please let it be known if the plugin works on versions older than 3.2 - I simply didn't have a way to check.
 
+----
+This product includes GeoLite data created by MaxMind, available from http://www.maxmind.com/app/geolitecountry
+
 == Installation ==
 
 1. Upload the `visitor-country` folder to the `/wp-content/plugins/` directory
@@ -75,6 +78,7 @@ Not at the moment, but this will be implemented shall there be a demand.
 The plugin will go up in version periodically to reflect MaxMind's new database. You can always update it manually by [downloading it from here](http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz), uncompress, and upload to the plugin directory.
 
 == Changelog ==
+
 
 = 1.0 =
 * MaxMind database update
