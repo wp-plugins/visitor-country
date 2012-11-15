@@ -74,11 +74,6 @@ Not at the moment, but this will be implemented shall there be a demand.
 
 The plugin will go up in version periodically to reflect MaxMind's new database. You can always update it manually by [downloading it from here](http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz), uncompress, and upload to the plugin directory.
 
-== Screenshots ==
-
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the directory of the stable readme.txt, so in this case, `/tags/4.3/screenshot-1.png` (or jpg, jpeg, gif)
-
 == Changelog ==
 
 = 1.0 =
