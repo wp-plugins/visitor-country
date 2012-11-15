@@ -42,14 +42,16 @@ class VisitorCountry {
     }
     
     // constructor (old school)
-    public function __construct() {    
+    public function __construct()
+    {
         $this->LoadVisitorData();
         $this->SetupActions();
         $this->AddShortcodes();    
     }
     
     // Loads the visitor data
-    function LoadVisitorData() {
+    function LoadVisitorData()
+    {
         // Get the path of the plugin
         $this->mPluginDir = plugin_dir_path( __FILE__ );
         $this->mPluginUrl = plugin_dir_url ( __FILE__ );
@@ -57,13 +59,19 @@ class VisitorCountry {
         // Include MaxMind's API
         include( $this->mPluginDir . 'geoip.inc');
     
-        // Get the visitor IP    
-        if ($_SERVER['HTTP_X_FORWARD_FOR'])
+        // Get the visitor IP
+        $iIp = $_SERVER[ 'REMOTE_ADDR' ];
+        if ( !empty( $_SERVER[ 'HTTP_CLIENT_IP' ] ) ) 
+        {               
+            // check ip from share internet
+            $iIp = $_SERVER[ 'HTTP_CLIENT_IP' ];
+        } elseif ( !empty( $_SERVER[ 'HTTP_X_FORWARDED_FOR'] ) )
         {
-            $this->mIP = $_SERVER['HTTP_X_FORWARD_FOR'];
-        } else {
-            $this->mIP = $_SERVER['REMOTE_ADDR'];
+            // to check ip is pass from proxy
+            $iIp = $_SERVER[ 'HTTP_X_FORWARDED_FOR' ];
         }
+        $iIpList = explode(",", $iIp);
+        $this->mIP=$iIpList[0];
     
         // Connect to MaxMind's GeoIP
         $iGeoIP = geoip_open( $this->mPluginDir . 'GeoIP.dat', GEOIP_STANDARD);
@@ -81,7 +89,8 @@ class VisitorCountry {
         geoip_close($iGeoIP);
     }
     
-    function SetupActions() {
+    function SetupActions()
+    {
         // Add javascript vars once the head is rendered
         add_action('wp_head', array($this, 'addJavaScriptVars'), 100);
     }
@@ -98,7 +107,8 @@ class VisitorCountry {
         ));        
     }
     
-    function AddShortcodes() {
+    function AddShortcodes()
+    {
         // Now lets add some shortcodes
         add_shortcode( 'VisitorCountry-Code', array(&$this, 'GetCode') );
         add_shortcode( 'VisitorCountry-Name', array(&$this, 'GetName') );

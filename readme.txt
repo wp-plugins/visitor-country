@@ -1,16 +1,20 @@
+
+
+This product includes GeoLite data created by MaxMind, available from http://www.maxmind.com/app/geolitecountry
+
 === Visitor Country ===
 Contributors: Izhaki
 Tags: geo, location, visitor, country, analysis
 Requires at least: 3.2
-Tested up to: 3.3.1
-Stable tag: 0.8
+Tested up to: 3.4.2
+Stable tag: 1.0
 A plugin that retrieves the visitor's country information (using MaxMind's GeoIP local dat file)
 
 == Description ==
 
-This plugin adds support for displaying (using shortcodes) or enquiring (using PHP or JS) the visitor's country. See it working [here](http://gefri.org/misc/wordpress/visitor-country).
+This plugin adds support for displaying (using shortcodes) or enquiring (using PHP or JS) the visitor's country.
 
-It uses [MaxMind's GeoIP data file](http://www.maxmind.com/app/geolitecountry), which is around 1.4 MB in size and is included with the plugin. The file is free, updated every month, and has the claimed accuracy of 99.5%;
+It uses [MaxMind's GeoIP data file](http://www.maxmind.com/app/geolitecountry), which is around 1 MB in size and is included with the plugin. The file is free, updated every month, and has the claimed accuracy of 99.5%;
 
 The plugin retrieves:
 
@@ -44,9 +48,6 @@ Please leave suggestions, comments and bug report at [the plugin's website](http
 
 Also, please let it be known if the plugin works on versions older than 3.2 - I simply didn't have a way to check.
 
-----
-This product includes GeoLite data created by MaxMind, available from http://www.maxmind.com/app/geolitecountry
-
 == Installation ==
 
 1. Upload the `visitor-country` folder to the `/wp-content/plugins/` directory
@@ -74,7 +75,16 @@ Not at the moment, but this will be implemented shall there be a demand.
 
 The plugin will go up in version periodically to reflect MaxMind's new database. You can always update it manually by [downloading it from here](http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz), uncompress, and upload to the plugin directory.
 
+== Screenshots ==
+
+1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
+the directory of the stable readme.txt, so in this case, `/tags/4.3/screenshot-1.png` (or jpg, jpeg, gif)
+
 == Changelog ==
+
+= 1.0 =
+* MaxMind database update
+* Improvement to ip detection to include intranet and proxy (Thanks Ade!)
 
 = 0.8 =
 * Original release
