@@ -1,7 +1,3 @@
-
-
-This product includes GeoLite data created by MaxMind, available from http://www.maxmind.com/app/geolitecountry
-
 === Visitor Country ===
 Contributors: Izhaki
 Tags: geo, location, visitor, country, analysis
