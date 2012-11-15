@@ -4,6 +4,9 @@ Tags: geo, location, visitor, country, analysis
 Requires at least: 3.2
 Tested up to: 3.4.2
 Stable tag: 1.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
 A plugin that retrieves the visitor's country information (using MaxMind's GeoIP local dat file)
 
 == Description ==
