@@ -3,7 +3,7 @@
 Plugin Name: Visitor Country
 Plugin URI: http://gefri.org/misc/wordpress/visitor-country
 Description: A plugin that retrieves the visitor's country information (using MaxMind's GeoIP local dat file)
-Version: 1.0.1
+Version: 1.1
 Author: Izhaki
 License: GPLv2 or later
 
@@ -71,7 +71,17 @@ class VisitorCountry {
             $iIp = $_SERVER[ 'HTTP_X_FORWARDED_FOR' ];
         }
         $iIpList = explode(",", $iIp);
-        $this->mIP=$iIpList[0];
+        
+        // Go through the list of IPs
+        foreach( $iIpList as $ip )
+        {
+            // Ignore LAN IPs and pick the first one representing WAN IPs
+            if( substr( $ip,0,8 ) !== '192.168.' )
+            {
+                $this->mIP=$ip;
+                break;
+            }
+        }
     
         // Connect to MaxMind's GeoIP
         $iGeoIP = geoip_open( $this->mPluginDir . 'GeoIP.dat', GEOIP_STANDARD);

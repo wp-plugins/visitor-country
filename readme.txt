@@ -2,8 +2,8 @@
 Contributors: Izhaki
 Tags: geo, location, visitor, country, analysis
 Requires at least: 3.2
-Tested up to: 3.4.2
-Stable tag: 1.0.1
+Tested up to: 3.5.1
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,6 +14,8 @@ A plugin that retrieves the visitor's country information (using MaxMind's GeoIP
 This plugin adds support for displaying (using shortcodes) or enquiring (using PHP or JS) the visitor's country. See it working [here](http://gefri.org/misc/wordpress/visitor-country).
 
 It uses [MaxMind's GeoIP data file](http://www.maxmind.com/app/geolitecountry), which is around 1.4 MB in size and is included with the plugin. The file is free, updated every month, and has the claimed accuracy of 99.5%;
+
+GitHub Repository is [here](https://github.com/Izhaki/Visitor-Country). 
 
 The plugin retrieves:
 
@@ -78,6 +80,11 @@ Not at the moment, but this will be implemented shall there be a demand.
 The plugin will go up in version periodically to reflect MaxMind's new database. You can always update it manually by [downloading it from here](http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz), uncompress, and upload to the plugin directory.
 
 == Changelog ==
+
+= 1.1 =
+
+Fixed Proxy issue
+GeoIP DB updated to May 2013
 
 = 1.0 =
 * MaxMind database update
